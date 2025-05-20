@@ -1,94 +1,121 @@
 import { useEffect, useState } from "react";
 
-// id, size, x, y, opacity, animationDuration
-// id, size, x, y, delay, animationDuration
+// Lista de rutas a los SVGs en public/Svg_images
+const ICONS = [
+  "/Svg_images/unicorn-origami-paper-svgrepo-com.svg",
+  "/Svg_images/owl-origami-paper-svgrepo-com.svg",
+  "/Svg_images/fox-origami-paper-svgrepo-com.svg",
+  "/Svg_images/cat-origami-paper-svgrepo-com.svg",
+  "/Svg_images/kangaroo-origami-paper-svgrepo-com.svg",
+  "/Svg_images/giraffe-origami-paper-svgrepo-com.svg",
+  "/Svg_images/horse-origami-paper-svgrepo-com.svg",
+];
+// Función para generar un número aleatorio entre dos valores
+// Se utiliza para determinar la posición, tamaño y otras propiedades de las figuras
+function randomBetween(a, b) {
+  return Math.random() * (b - a) + a;
+}
 
 export const StarBackground = () => {
-  const [stars, setStars] = useState([]);
-  const [meteors, setMeteors] = useState([]);
-
+  const [figures, setFigures] = useState([]);
+  // Estado para almacenar las figuras generadas
+  // Se inicializa como un array vacío
   useEffect(() => {
-    generateStars();
-    generateMeteors();
+    generateFigures();
 
     const handleResize = () => {
-      generateStars();
+      generateFigures();
     };
 
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const generateStars = () => {
-    const numberOfStars = Math.floor(
-      (window.innerWidth * window.innerHeight) / 10000
-    );
-
-    const newStars = [];
-
-    for (let i = 0; i < numberOfStars; i++) {
-      newStars.push({
+   // Genera figuras aleatorias y las añade al estado
+  // Se basa en el tamaño de la ventana para determinar cuántas figuras generar
+  // y sus propiedades aleatorias
+  // Se asegura de que las figuras se regeneren al cambiar el tamaño de la ventana
+  // y al cargar el componente
+  // Se utiliza un efecto secundario para manejar la generación de figuras
+  // y la limpieza del evento de cambio de tamaño
+  // Se utiliza un efecto secundario para manejar la generación de figuras
+  const generateFigures = () => {
+    const numberOfFigures = Math.floor((window.innerWidth * window.innerHeight) / 18000);
+    const newFigures = [];
+    for (let i = 0; i < numberOfFigures; i++) {
+      const xMove = randomBetween(-30, 30);
+      const yMove = randomBetween(-30, 30);
+      const scale = randomBetween(0.8, 1.3);
+      const rotate = randomBetween(-30, 30);
+      newFigures.push({
         id: i,
-        size: Math.random() * 3 + 1,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        opacity: Math.random() * 0.5 + 0.5,
-        animationDuration: Math.random() * 4 + 2,
+        icon: ICONS[i % ICONS.length], 
+        size: randomBetween(32, 64),
+        x: randomBetween(0, 100),
+        y: randomBetween(0, 100),
+        opacity: randomBetween(0.7, 1),
+        duration: randomBetween(14, 28),
+        delay: randomBetween(0, 10),
+        xMove,
+        yMove,
+        scale,
+        rotate,
       });
     }
-
-    setStars(newStars);
-  };
-
-  const generateMeteors = () => {
-    const numberOfMeteors = 4;
-    const newMeteors = [];
-
-    for (let i = 0; i < numberOfMeteors; i++) {
-      newMeteors.push({
-        id: i,
-        size: Math.random() * 2 + 1,
-        x: Math.random() * 100,
-        y: Math.random() * 20,
-        delay: Math.random() * 15,
-        animationDuration: Math.random() * 3 + 3,
-      });
-    }
-
-    setMeteors(newMeteors);
+    setFigures(newFigures);
   };
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {stars.map((star) => (
+      {figures.map((fig) => (
         <div
-          key={star.id}
-          className="star animate-pulse-subtle"
+          key={fig.id}
           style={{
-            width: star.size + "px",
-            height: star.size + "px",
-            left: star.x + "%",
-            top: star.y + "%",
-            opacity: star.opacity,
-            animationDuration: star.animationDuration + "s",
+            position: "absolute",
+            left: `${fig.x}%`,
+            top: `${fig.y}%`,
+            width: `${fig.size}px`,
+            height: `${fig.size}px`,
+            opacity: fig.opacity,
+            zIndex: 0,
+            userSelect: "none",
+            animation: `floatAround${fig.id} ${fig.duration}s ease-in-out ${fig.delay}s infinite alternate`,
+            willChange: "transform",
           }}
-        />
-      ))}
-
-      {meteors.map((meteor) => (
-        <div
-          key={meteor.id}
-          className="meteor animate-meteor"
-          style={{
-            width: meteor.size * 50 + "px",
-            height: meteor.size * 2 + "px",
-            left: meteor.x + "%",
-            top: meteor.y + "%",
-            animationDelay: meteor.delay,
-            animationDuration: meteor.animationDuration + "s",
-          }}
-        />
+        >
+          <img
+            src={fig.icon}
+            alt="icono origami"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.10))",
+            }}
+            draggable={false}
+          />
+          <style>
+            {`
+              @keyframes floatAround${fig.id} {
+                0% {
+                  transform: translate(0px, 0px) scale(1) rotate(0deg);
+                }
+                25% {
+                  transform: translate(${fig.xMove / 2}vw, ${fig.yMove / 2}vh) scale(${fig.scale}) rotate(${fig.rotate / 2}deg);
+                }
+                50% {
+                  transform: translate(${fig.xMove}vw, ${fig.yMove}vh) scale(1) rotate(${fig.rotate}deg);
+                }
+                75% {
+                  transform: translate(${fig.xMove / 2}vw, ${fig.yMove / 2}vh) scale(${fig.scale}) rotate(${fig.rotate / 2}deg);
+                }
+                100% {
+                  transform: translate(0px, 0px) scale(1) rotate(0deg);
+                }
+              }
+            `}
+          </style>
+        </div>
       ))}
     </div>
   );

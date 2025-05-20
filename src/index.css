@@ -64,27 +64,27 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --background: 220 60% 98%;         /* Fondo más azulado */
+    --foreground: 230 60% 15%;         /* Texto más oscuro */
 
-    --card: 0 0% 100%;
+    --card: 220 40% 96%;               /* Tarjetas azul claro */
 
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 248 70% 60%;            /* Primario violeta */
+    --primary-foreground: 220 60% 98%; /* Texto sobre primario */
 
-    --border: 214 32% 91%;
+    --border: 220 30% 85%;             /* Bordes azul claro */
   }
 
   .dark {
-    --background: 222 47% 4%;
-    --foreground: 213 31% 91%;
+    --background: 230 40% 8%;          /* Fondo oscuro azulado */
+    --foreground: 220 30% 92%;         /* Texto claro */
 
-    --card: 222 47% 8%;
+    --card: 230 40% 12%;               /* Tarjetas azul oscuro */
 
-    --primary: 250 65% 65%;
-    --primary-foreground: 213 31% 91%;
+    --primary: 248 80% 70%;            /* Primario violeta claro */
+    --primary-foreground: 220 30% 92%; /* Texto sobre primario */
 
-    --border: 217 33% 20%;
+    --border: 230 30% 25%;             /* Bordes azul oscuro */
   }
 
   * {
