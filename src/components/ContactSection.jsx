@@ -23,8 +23,8 @@ export const ContactSection = () => {
 
     setTimeout(() => {
       toast({
-        titulo: "Mensaje enviado!",
-        Decripción: "Gracias por su mensaje. Vuelve pronto.",
+        title: "Mensaje enviado!",
+        description: "Gracias por su mensaje. Vuelve pronto.",
       });
       setIsSubmitting(false);
     }, 1500);
@@ -83,12 +83,17 @@ export const ContactSection = () => {
               <div className="p-3 rounded-full bg-primary/10">
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
-            <div className="text-left">
-              <h4 className="font-medium">Localización</h4>
-              <a className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                Telde, IC, España
-              </a>
-            </div>
+              <div className="text-left">
+                <h4 className="font-medium">Localización</h4>
+                <a
+                  href="https://maps.app.goo.gl/XXNBp4sd38poZ9HW9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                >
+                  Telde, IC, España
+                </a>
+              </div>
             </div>
           </div>
 
@@ -96,7 +101,7 @@ export const ContactSection = () => {
               <h4 className="font-medium mb-4"> Contactame aqui</h4>
               <div className="flex space-x-4 justify-center">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/alejandro-gonz%C3%A1lez-dom%C3%ADnguez-48272a350/"
                   target="_blank"
                   className="transition-colors text-muted-foreground hover:text-primary"
                 >
@@ -110,7 +115,7 @@ export const ContactSection = () => {
                   <Twitter />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/alejandro_jgd/"
                   target="_blank"
                   className="transition-colors text-muted-foreground hover:text-primary"
                 >
