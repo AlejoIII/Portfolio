@@ -48,7 +48,7 @@ export const SkillsSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer",
+                "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer hover:bg-primary hover:text-primary-foreground",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary/70 text-forefround hover:bg-secondary"
@@ -60,7 +60,7 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {filteredSkills.map((skill, key) => (
             <a
               key={key}

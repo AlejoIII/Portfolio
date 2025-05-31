@@ -15,22 +15,23 @@ export const AboutSection = () => {
               {" "}
               <span className="text-glow text-foreground"> <span className="text-primary">Alejandro </span> González Domínguez</span>
             </h3>
+            <div className="gradient-border p-6 card-hover space-y-4">
+              <p className="text-muted-foreground text-base leading-relaxed">
+                <span className="font-semibold text-primary">¡Hola! Soy Alejandro González Domínguez.</span> <br />
+                Desarrollador web apasionado con experiencia en la creación de aplicaciones modernas y escalables.<br />
+                <span className="block mt-2">
+                  <span className="font-medium">Especialidades:</span> React, Node.js y Next.js.<br />
+                  Siempre busco ofrecer la mejor experiencia de usuario y un diseño de interfaces atractivo y funcional.
+                </span>
+              </p>
 
-            <p className="text-muted-foreground">
-              Soy un desarrollador web apasionado con experiencia en la creación
-              de aplicaciones web modernas y escalables. Me especializo en
-              tecnologías como React, Node.js y Next.js, y tengo un fuerte
-              enfoque en la experiencia del usuario y el diseño de interfaces.
-            </p>
-
-            <p className="text-muted-foreground">
-              Me encanta aprender nuevas tecnologías y mejorar mis habilidades
-              constantemente. Siempre estoy buscando nuevos desafíos y
-              oportunidades para crecer como desarrollador. Si tienes un
-              proyecto interesante o simplemente quieres charlar, no dudes en
-              ponerte en contacto conmigo.
-            </p>
-
+              <p className="text-muted-foreground text-base leading-relaxed">
+                Me motiva aprender nuevas tecnologías y mejorar mis habilidades constantemente.<br />
+                <span className="block mt-2">
+                  Si tienes un proyecto interesante o simplemente quieres charlar sobre desarrollo, <span className="font-semibold text-primary">¡no dudes en ponerte en contacto conmigo!</span>
+                </span>
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
                 {" "}

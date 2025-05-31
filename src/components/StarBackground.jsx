@@ -16,6 +16,10 @@ function randomBetween(a, b) {
   return Math.random() * (b - a) + a;
 }
 
+// Componente StarBackground
+// Este componente genera un fondo animado con figuras de origami
+// Utiliza un efecto secundario para generar figuras al cargar el componente
+// y al cambiar el tamaño de la ventana
 export const StarBackground = () => {
   const [figures, setFigures] = useState([]);
   // Estado para almacenar las figuras generadas
