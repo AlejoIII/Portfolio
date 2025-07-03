@@ -1,5 +1,14 @@
 import { Briefcase, Code, User } from "lucide-react";
 
+const handleDownloadCV = () => {
+  const link = document.createElement("a");
+  link.href = "/Portfolio/Alejandro González Domínguez.pdf"; 
+  link.download = "Alejandro González Domínguez.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
@@ -39,8 +48,8 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href=""
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+                onClick={handleDownloadCV}
+                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 cursor-pointer"
               >
                 Descargar CV
               </a>

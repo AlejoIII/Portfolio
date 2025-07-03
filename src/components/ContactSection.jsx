@@ -168,7 +168,7 @@ export const ContactSection = () => {
                 focus:outline-none
                 placeholder:text-muted-foreground focus:placeholder:text-primary
                 transition-colors duration-200"
-              placeholder="Alejandrotrabajodev17@gmail.com"
+              placeholder="Alejandrotrabajodev17@gmail.com..."
             />
           </div>
 

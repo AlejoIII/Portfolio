@@ -11,7 +11,7 @@ export const HeroSection = () => {
           {/* Foto de perfil */}
           <div className="flex justify-center">
             <img
-              src="3.jpg" 
+              src="/Portfolio/3.jpg" 
               alt="Foto de perfil de Alejandro"
               className="w-32 h-32 md:w-60 md:h-60 rounded-full object-cover shadow-lg border-4 border-primary/60 mb-4 opacity-0 animate-fade-in"
             />

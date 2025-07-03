@@ -2,20 +2,19 @@ import { useEffect, useState } from "react";
 
 // Lista de rutas a los SVGs en public/Svg_images
 const ICONS = [
-  "/Svg_images/unicorn-origami-paper-svgrepo-com.svg",
-  "/Svg_images/owl-origami-paper-svgrepo-com.svg",
-  "/Svg_images/fox-origami-paper-svgrepo-com.svg",
-  "/Svg_images/cat-origami-paper-svgrepo-com.svg",
-  "/Svg_images/kangaroo-origami-paper-svgrepo-com.svg",
-  "/Svg_images/giraffe-origami-paper-svgrepo-com.svg",
-  "/Svg_images/horse-origami-paper-svgrepo-com.svg",
+  "/Portfolio/Svg_images/unicorn-origami-paper-svgrepo-com.svg",
+  "/Portfolio/Svg_images/owl-origami-paper-svgrepo-com.svg",
+  "/Portfolio/Svg_images/fox-origami-paper-svgrepo-com.svg",
+  "/Portfolio/Svg_images/cat-origami-paper-svgrepo-com.svg",
+  "/Portfolio/Svg_images/kangaroo-origami-paper-svgrepo-com.svg",
+  "/Portfolio/Svg_images/giraffe-origami-paper-svgrepo-com.svg",
+  "/Portfolio/Svg_images/horse-origami-paper-svgrepo-com.svg",
 ];
 // Función para generar un número aleatorio entre dos valores
 // Se utiliza para determinar la posición, tamaño y otras propiedades de las figuras
 function randomBetween(a, b) {
   return Math.random() * (b - a) + a;
 }
-
 // Componente StarBackground
 // Este componente genera un fondo animado con figuras de origami
 // Utiliza un efecto secundario para generar figuras al cargar el componente
