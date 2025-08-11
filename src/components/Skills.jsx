@@ -1,6 +1,35 @@
-const Tag = ({children}) => (
-  <span className="px-3 py-1 rounded-full bg-neutral-800 border border-neutral-700 text-sm">{children}</span>
-)
+const techLinks = {
+  'JavaScript': 'https://developer.mozilla.org/docs/Web/JavaScript',
+  'PHP': 'https://www.php.net/',
+  'Java': 'https://www.java.com/',
+  'HTML5': 'https://developer.mozilla.org/docs/Web/Guide/HTML/HTML5',
+  'CSS3': 'https://developer.mozilla.org/docs/Web/CSS',
+  'Bootstrap 4/5': 'https://getbootstrap.com/',
+  'React': 'https://react.dev/',
+  'Symfony': 'https://symfony.com/',
+  'Django': 'https://www.djangoproject.com/',
+  'Blazor': 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor',
+  '.NET': 'https://dotnet.microsoft.com/',
+  'MySQL': 'https://www.mysql.com/',
+  'PostgreSQL': 'https://www.postgresql.org/',
+  'MongoDB': 'https://www.mongodb.com/'
+};
+
+const Tag = ({children}) => {
+  const link = techLinks[children];
+  return link ? (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-3 py-1 rounded-full bg-neutral-800 border border-neutral-700 text-sm hover:underline focus:underline"
+    >
+      {children}
+    </a>
+  ) : (
+    <span className="px-3 py-1 rounded-full bg-neutral-800 border border-neutral-700 text-sm">{children}</span>
+  );
+};
 
 export default function Skills() {
   return (
