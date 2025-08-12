@@ -2,7 +2,7 @@ function Cert({ name, org }) {
   return (
     <div className="card">
       <h3 className="text-lg font-semibold">{name}</h3>
-      <p className="text-neutral-300">{org}</p>
+  <p className="text-neutral-700 dark:text-neutral-300">{org}</p>
     </div>
   )
 }

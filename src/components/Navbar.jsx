@@ -32,7 +32,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/60">
+    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-neutral-950/60">
       <nav className="container-max flex items-center justify-between py-4">
         <a href="#inicio" className="font-semibold tracking-tight">
           <span className="text-brand-400">Alejandro</span> González
@@ -46,7 +46,7 @@ export default function Navbar() {
         </ul>
         <button
           onClick={toggleTheme}
-          className="md:inline-block hidden border border-brand-500/40 hover:border-brand-400 text-brand-300 hover:text-brand-200 rounded-xl px-4 py-2 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-400"
+          className="md:inline-block hidden border border-brand-400/40 dark:border-brand-500/40 hover:border-brand-400 text-brand-600 hover:text-brand-500 dark:text-brand-300 dark:hover:text-brand-200 rounded-xl px-4 py-2 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-brand-400"
           aria-label="Cambiar tema claro/oscuro"
         >
           {theme === 'dark' ? (

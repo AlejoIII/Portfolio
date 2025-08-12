@@ -2,15 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-.container-max {
-  @apply max-w-6xl mx-auto px-4;
-}
+.container-max { @apply max-w-6xl mx-auto px-4; }
 
-.card {
-  @apply bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 shadow-lg;
-}
+.card { @apply bg-white border border-neutral-200 rounded-2xl p-6 shadow-lg dark:bg-neutral-900/60 dark:border-neutral-800; }
+

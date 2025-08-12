@@ -3,9 +3,9 @@ function Item({ role, company, period, bullets }) {
     <div className="card">
       <div className="flex items-center justify-between gap-2 mb-2">
         <h3 className="text-lg font-semibold">{role} · <span className="text-brand-300">{company}</span></h3>
-        <span className="text-sm text-neutral-400">{period}</span>
+  <span className="text-sm text-neutral-500 dark:text-neutral-400">{period}</span>
       </div>
-      <ul className="list-disc list-inside text-neutral-300 space-y-1">
+  <ul className="list-disc list-inside text-neutral-700 dark:text-neutral-300 space-y-1">
         {bullets.map((b, i) => <li key={i}>{b}</li>)}
       </ul>
     </div>

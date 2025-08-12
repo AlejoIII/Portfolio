@@ -3,9 +3,9 @@ function Edu({ title, center, years }) {
     <div className="card">
       <div className="flex items-center justify-between gap-2">
         <h3 className="text-lg font-semibold">{title}</h3>
-        <span className="text-sm text-neutral-400">{years}</span>
+  <span className="text-sm text-neutral-500 dark:text-neutral-400">{years}</span>
       </div>
-      <p className="text-neutral-300 mt-1">{center}</p>
+  <p className="text-neutral-700 dark:text-neutral-300 mt-1">{center}</p>
     </div>
   )
 }

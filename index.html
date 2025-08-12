@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Alejandro José González Domínguez — Desarrollador" />
     <title>Alejandro González</title>
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('theme') || 'dark';
+          if (t === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/Logo.png" />
   </head>
-  <body class="bg-neutral-950 text-neutral-100">
+  <body class="bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

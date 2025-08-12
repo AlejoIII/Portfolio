@@ -3,7 +3,7 @@ export default function Contact() {
     <section id="contacto" className="container-max">
       <h2 className="text-2xl font-semibold mb-6">Contacto</h2>
       <div className="card">
-        <p className="text-neutral-300 mb-4">
+  <p className="text-neutral-700 dark:text-neutral-300 mb-4">
           ¿Tienes una oportunidad o un proyecto interesante? Me encantará hablar contigo.
         </p>
         <div className="flex flex-wrap items-center gap-3">

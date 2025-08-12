@@ -11,7 +11,7 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
           Alejandro José <span className="text-brand-400">González Domínguez</span>
         </h1>
-        <p className="text-neutral-300">
+  <p className="text-neutral-600 dark:text-neutral-300">
           Desde que finalicé mi Grado Medio, he desarrollado un gran interés por el desarrollo
           de software. Busco una oportunidad para seguir aprendiendo, adquirir experiencia práctica
           y crecer como profesional. Soy una persona comprometida, con ganas de aportar, mejorar
@@ -44,16 +44,16 @@ export default function Hero() {
             className="w-20 h-20 rounded-full object-cover border border-neutral-800"
           />
           <div>
-            <p className="text-sm text-neutral-400">Disponible para trabajar</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">Disponible para trabajar</p>
             <p className="font-semibold">Alejandro González</p>
           </div>
         </div>
 
         <ul className="grid grid-cols-2 gap-4 text-sm">
-          <li><span className="text-neutral-400">Ubicación</span><br/>España</li>
-          <li><span className="text-neutral-400">Idioma</span><br/>Inglés</li>
-          <li><span className="text-neutral-400">Email</span><br/><a className="text-brand-300 hover:underline" href="mailto:alejandrotrabajodev17@gmail.com">alejandrotrabajodev17@gmail.com</a></li>
-          <li><span className="text-neutral-400">Teléfono</span><br/><a className="hover:underline" href="tel:+34615195992">+34 615 19 59 92</a></li>
+          <li><span className="text-neutral-500 dark:text-neutral-400">Ubicación</span><br/>España</li>
+          <li><span className="text-neutral-500 dark:text-neutral-400">Idioma</span><br/>Inglés</li>
+          <li><span className="text-neutral-500 dark:text-neutral-400">Email</span><br/><a className="text-brand-600 dark:text-brand-300 hover:underline" href="mailto:alejandrotrabajodev17@gmail.com">alejandrotrabajodev17@gmail.com</a></li>
+          <li><span className="text-neutral-500 dark:text-neutral-400">Teléfono</span><br/><a className="hover:underline" href="tel:+34615195992">+34 615 19 59 92</a></li>
         </ul>
       </div>
     </section>

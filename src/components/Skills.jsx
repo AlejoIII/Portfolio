@@ -15,6 +15,8 @@ const techLinks = {
   'MongoDB': 'https://www.mongodb.com/'
 };
 
+const pillClasses = "px-3 py-1 rounded-full border text-sm bg-neutral-100 border-neutral-300 text-neutral-800 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-100";
+
 const Tag = ({children}) => {
   const link = techLinks[children];
   return link ? (
@@ -22,12 +24,12 @@ const Tag = ({children}) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="px-3 py-1 rounded-full bg-neutral-800 border border-neutral-700 text-sm hover:underline focus:underline"
+      className={pillClasses + " hover:underline focus:underline"}
     >
       {children}
     </a>
   ) : (
-    <span className="px-3 py-1 rounded-full bg-neutral-800 border border-neutral-700 text-sm">{children}</span>
+    <span className={pillClasses}>{children}</span>
   );
 };
 
