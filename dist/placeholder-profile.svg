@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="24" fill="#0a0a0a"/>
+  <circle cx="128" cy="92" r="44" fill="#1f2937"/>
+  <path d="M32 216c0-40 40-64 96-64s96 24 96 64v8H32v-8z" fill="#111827"/>
+  <circle cx="128" cy="92" r="36" fill="#374151"/>
+  <text x="50%" y="232" text-anchor="middle" fill="#6b7280" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="12">Foto de perfil</text>
+</svg>
