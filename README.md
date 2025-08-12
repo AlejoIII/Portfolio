@@ -91,7 +91,3 @@ Si vas a publicar en `https://tu-usuario.github.io/mi-portfolio/`:
 La rama `master` quedará solo para el código fuente y la rama `gh-pages` para el sitio publicado.
 
 > Nota: La app usa `HashRouter` para que la navegación funcione en GitHub Pages.
-
----
-
-Si quieres que añada proyectos, imágenes o un blog, dímelo y lo integramos. ✨
