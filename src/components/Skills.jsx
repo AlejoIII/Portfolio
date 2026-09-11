@@ -6,13 +6,15 @@ const techLinks = {
   'CSS3': 'https://developer.mozilla.org/docs/Web/CSS',
   'Bootstrap 4/5': 'https://getbootstrap.com/',
   'React': 'https://react.dev/',
+  'Flutter': 'https://flutter.dev/',
   'Symfony': 'https://symfony.com/',
   'Django': 'https://www.djangoproject.com/',
   'Blazor': 'https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor',
   '.NET': 'https://dotnet.microsoft.com/',
   'MySQL': 'https://www.mysql.com/',
   'PostgreSQL': 'https://www.postgresql.org/',
-  'MongoDB': 'https://www.mongodb.com/'
+  'MongoDB': 'https://www.mongodb.com/',
+  'Firebird': 'https://firebirdsql.org/'
 };
 
 const pillClasses = "px-3 py-1 rounded-full border text-sm bg-neutral-100 border-neutral-300 text-neutral-800 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-100";
@@ -54,6 +56,7 @@ export default function Skills() {
             <h3 className="font-medium text-brand-300 mb-3">Frameworks y librerías</h3>
             <div className="flex flex-wrap gap-2">
               <Tag>React</Tag>
+              <Tag>Flutter</Tag>
               <Tag>Symfony</Tag>
               <Tag>Django</Tag>
               <Tag>Blazor</Tag>
@@ -66,6 +69,7 @@ export default function Skills() {
               <Tag>MySQL</Tag>
               <Tag>PostgreSQL</Tag>
               <Tag>MongoDB</Tag>
+              <Tag>Firebird</Tag>
             </div>
           </div>
         </div>
